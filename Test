@@ -1,3 +1,3 @@
-            this.Hide();
-            BansheeUI BansheeUI = new BansheeUI();
-            BansheeUI.Show(); ;
+this.Hide();
+BansheeUI BansheeUI = new BansheeUI();
+BansheeUI.Show(); ;
