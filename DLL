@@ -1,0 +1,12 @@
+local gmt = getrawmetatable(game)
+local old = gmt.__index
+
+gmt.__index = function(self, key)
+if key == "GetObjects" or key == "getobjects" then
+return function(self, id) return GetObjects(id) end
+end
+if key == "HttpGet" or key == "HttpGetAsync" then
+return function(self, url, async) return DLS(url) end
+end
+return old(self, key)
+end
